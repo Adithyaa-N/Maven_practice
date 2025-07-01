@@ -38,9 +38,9 @@ public class ReadExcel {
     }
 
     public static List<Test1> getData() throws IOException {
-        List<Test1> list = new ArrayList<>();
+        List<Test1> list1 = new ArrayList<>();
 
-        FileInputStream fis = new FileInputStream(new File("C:\\Users\\2407244\\IdeaProjects\\Maven_practice\\src\\main\\resources\\ExcelData.xlsx"));
+        FileInputStream fis = new FileInputStream(new File("src/main/resources/ExcelData.xlsx"));
         XSSFWorkbook book = new XSSFWorkbook(fis);
         Sheet sheet = book.getSheetAt(0);
         Iterator<Row> rows = sheet.rowIterator();
@@ -64,8 +64,8 @@ public class ReadExcel {
                         break;
                 }
             }
-            list.add(new Test1(id, name));
+            list1.add(new Test1(id, name));
         }
-        return list;
+        return list1;
     }
 }
