@@ -40,7 +40,7 @@ public class ReadExcel {
     public static List<Test1> getData() throws IOException {
         List<Test1> list = new ArrayList<>();
 
-        FileInputStream fis = new FileInputStream(new File("src/main/resources/ExcelData.xlsx"));
+        FileInputStream fis = new FileInputStream(new File("ExcelData.xlsx"));
         XSSFWorkbook book = new XSSFWorkbook(fis);
         Sheet sheet = book.getSheetAt(0);
         Iterator<Row> rows = sheet.rowIterator();
