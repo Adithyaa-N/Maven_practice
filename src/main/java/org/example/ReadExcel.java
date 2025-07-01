@@ -29,10 +29,10 @@ class Test1 {
 
 public class ReadExcel {
     public static void main(String[] args) throws IOException {
-        List<Test1> dataList = getData();
+        List<Test1> data1List = getData();
 
         // Print extracted data
-        for (Test1 obj : dataList) {
+        for (Test1 obj : data1List) {
             System.out.println("ID: " + obj.getId() + ", Name: " + obj.getName());
         }
     }
