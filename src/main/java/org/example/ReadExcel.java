@@ -29,7 +29,7 @@ class Test1 {
 
 public class ReadExcel {
     public static void main(String[] args) throws IOException {
-        List<Test1> data1List = getData();
+        List<Test1> data1List = getExcelData();
 
         // Print extracted data
         for (Test1 obj : data1List) {
@@ -37,7 +37,7 @@ public class ReadExcel {
         }
     }
 
-    public static List<Test1> getData() throws IOException {
+    public static List<Test1> getExcelData() throws IOException {
         List<Test1> list = new ArrayList<>();
 
         FileInputStream fis = new FileInputStream(new File("src/main/resources/ExcelData.xlsx"));
